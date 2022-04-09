@@ -1,0 +1,66 @@
+
+<h2>Employee Details</h2>
+<br>
+<!-- button -->
+
+<!-- this paragraph tag is for deleting meassage info -->
+<!-- <p>{{msg}}</p> -->
+
+
+<div class="button_container">
+    
+    <a  routerLink="/add"><button class="btn" id="btn"><span>Add Employee</span></button></a>
+  </div>
+  
+  
+
+<!-- search bar -->
+
+<div class="searchBox">
+
+    <input class="searchInput"type="text" name="" placeholder="Search" (keyup)="doSearch(search.value)" #search>
+    <button class="searchButton" href="#">
+        <i class="fa-solid fa-magnifying-glass">
+            
+        </i>
+    </button>
+</div>
+
+
+<!-- Table -->
+    
+    <table class="container">
+        <thead>
+            <tr>
+                <th><h1>ID</h1></th>
+                <th><h1>Name</h1></th>
+                <!-- <th><h1>Last Name</h1></th> -->
+                <th><h1>Branch</h1></th>
+                <th><h1>Designation</h1></th>
+                <th><h1>Salary</h1></th>
+                <th><h1>Email</h1></th>
+                <th><h1>Phone Number</h1></th>
+                <th><h1>Operation</h1></th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let i of users">
+                <td>{{i.uid}} </td>
+                <td id="name">{{i.ufirstname}} {{i.ulastname}}</td>
+                <!-- <td>{{i.ulastname}}</td> -->
+                <td>{{i.ubranch}}</td>
+                <td>{{i.udesignation}}</td>
+                <td>{{i.usalary}}</td>
+                <td>{{i.umail}}</td>
+                <td>{{i.uphone}}</td>
+                <td>
+                    <a routerLink="/edit/{{i._id}}"><button class="btn"><i class="fa-solid fa-pen blue"></i></button></a>&nbsp;
+                    <button class="btn"(click)="deleteUser(i._id)"><i class="fa-solid fa-trash text-danger"></i></button>&nbsp;
+                    <a routerLink="/view/{{i._id}}"><button class="btn"><i class="fa-solid fa-circle-info text-warning"></i></button></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p *ngIf="users.length==0" class="text-center text-danger" id="record">No Records Found</p>
+    <br>

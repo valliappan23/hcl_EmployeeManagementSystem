@@ -1,0 +1,60 @@
+#p{
+    font-size:xx-large;
+    color: darkgreen;
+}
+#p1{
+    font-style: italic;
+    font-size:larger;
+    text-justify: newspaper;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+#i1{
+    width:100%
+}
+h3{
+    color: goldenrod;
+    font-style: oblique;
+    font-size: xx-large;
+    text-justify: kashida;
+    padding-left: 20px;
+}
+#c1{
+    padding-left: 25px;
+    padding-right: 25px;
+    
+}
+#c2{
+    padding-left: 25px;
+    padding-right: 25px;
+    
+}
+#c3{
+    padding-left: 25px;
+    padding-right: 25px;
+    
+}
+#c4{
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+}
+#c5{
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+}
+.card-title{
+    color: darkgreen;
+    font-family:fantasy
+}
+.card-text{
+    font-family:sans-serif;
+    text-align: justify;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+h5{
+    padding-top: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}

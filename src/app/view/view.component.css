@@ -1,0 +1,31 @@
+.details{
+    left: 300px;
+}
+#back{
+    font-size: x-large;
+    padding-top: 10px;
+    padding-left: 30px;
+
+}
+#name{
+    font-size:x-large;
+    text-transform: uppercase;
+}
+#designation{
+    font-size:110%;
+    text-transform: uppercase;
+}
+#branch{
+    font-size:100%;
+    text-transform: uppercase;
+}
+#field{
+    font-size: medium;
+    color: blue;
+    font-family: inherit;
+    font-style: unset;
+}
+#head{
+    font-size: x-large;
+    color: red;
+}

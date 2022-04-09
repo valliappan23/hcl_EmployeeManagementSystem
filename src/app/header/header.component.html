@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="./../../assets/images/Heading1.png" alt="logo" width="30" height="30" class="d-inline-block align-text-top">
+      <SPAN id="title">FREE BIRD</SPAN></a>
+    <button class="navbar-toggler" 
+    type="button"
+     data-bs-toggle="collapse" 
+     data-bs-target="#toggleMobileMenu" 
+     aria-controls="toggleMobileMenu" 
+     aria-expanded="false" 
+     aria-label="Toggle navigation"
+     >
+      <span class="navbar-toggler-icon" id="navbutton"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="toggleMobileMenu">
+      <ul class="navbar-nav ms-auto text-sm-center text-md-center">
+        <!-- <li class="nav-item" *ngIf="!!UserSer.isEmployee()">
+          <a class="nav-link" href="/management"id="pages" *ngIf=><i class="fa-solid fa-book-open"></i>Management</a>
+        </li> -->
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="pages"><i class="fa-solid fa-house"></i>Home</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" href="/about"id="pages"><i class="fa-solid fa-circle-info"></i>About Us</a>
+        </li>
+        
+
+        <li class="nav-item" *ngIf="!UserSer.isLoggedIn()">
+          <a class="nav-link" href="/login"id="pages"><i class="fa-solid fa-arrow-right-to-bracket"></i>Login</a>
+        </li>
+
+        <li class="nav-item" *ngIf="!!UserSer.isEmployee()">
+          <a class="nav-link"  href="/management" id="pages"><i class="fa-solid fa-book-open"></i>Management</a>
+        </li>
+        
+        
+        <li class="nav-item">
+          <a type="button" class="nav-link" (click)="move()" id="pages"*ngIf="UserSer.isLoggedIn()"onclick="move()"><i class="fa-solid fa-table-columns"></i>Dashboard</a>
+        </li>
+        
+        <!-- dont put anything here -->
+        <li class="nav-item" *ngIf="UserSer.isLoggedIn()">
+          <a class="nav-link" href="#" id="pages"(click)="doLogout()"><i class="fa-solid fa-arrow-right-from-bracket"></i>Log out</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

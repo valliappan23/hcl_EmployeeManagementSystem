@@ -1,0 +1,23 @@
+
+#title{
+    color: gold;
+    font-size: x-large;
+    font-style: italic;
+    font-family: cursive;
+    margin-left: 20px;
+    font-weight: 600;
+    
+}
+#pages{
+    color:red;
+    font-size: medium;
+    font-style: oblique;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+}
+#navbutton{
+    background-color: orangered;
+}
+i{
+    padding-right: 10px;
+}

@@ -1,0 +1,138 @@
+<form *ngIf="userdata">
+  <!-- <p>THIS IS DASHBOARD</p> -->
+  <section style="background-color: #eee;">
+      <div class="container py-md-2">
+        
+        <!-- <div class="row">
+          <div class="col">
+            <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
+              <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">User</a></li>
+                <li class="breadcrumb-item active" aria-current="page">User Profile</li>
+              </ol>
+            </nav>
+          </div>
+        </div> -->
+    
+        <div class="row">
+          <div class="col-lg-4 details">
+            <div class="card mb-4">
+              <div class="card-body text-center">
+                <img src="https://cdn3.iconfinder.com/data/icons/essential-rounded/64/Rounded-31-512.png" alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
+                <h5 class="my-3"id="name">{{userdata.ufirstname}} {{userdata.ulastname}}</h5>
+                <p class="text-muted mb-1"id="designation">{{userdata.udesignation}}</p>
+                <p class="text-muted mb-4"id="branch">{{userdata.ubranch}}</p>
+                <div class="d-flex justify-content-center mb-2">
+                  <!-- <button type="button" class="btn btn-primary">Follow</button> -->
+                  <!-- <button type="button" class="btn btn-outline-primary ms-1">Message</button> -->
+                </div>
+              </div>
+            </div>
+            <div class="card mb-4 mb-lg-0 pull-right">
+              <div class="card-body p-0">
+                <ul class="list-group list-group-flush rounded-3">
+                  <!-- <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                    <i class="fab fa-facebook fa-lg text-primary"></i>
+                    <p class="mb-0">facbook id</p>
+                  </li> -->
+                  <!-- <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                    <i class="fab fa-instagram fa-lg" style="color: #ac2bac;"></i>
+                    <p class="mb-0">Instagram id</p>
+                  </li> -->
+                  <!-- <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                    <i class="fab fa-github fa-lg" style="color: #333333;"></i>
+                    <p class="mb-0">git hub id</p>
+                  </li> -->
+                  <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                    <i class="fa-solid fa-envelope fa-lg" style="color: rgb(191, 12, 226);"></i>
+                    <p class="mb-0">{{userdata.umail}}</p>
+                  </li>
+                  <!-- <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                    <i class="fab fa-linkedin fa-lg" style="color: #1a45a3;"></i>
+                    <p class="mb-0">mdbootstrap</p>
+                  </li> -->
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="card mb-4">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-sm-3">
+                    <p class="mb-0"id="field">Full Name</p>
+                  </div>
+                  <div class="col-sm-9">
+                    <p class="text-muted mb-0">{{userdata.ufirstname}} {{userdata.ulastname}}</p>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <p class="mb-0"id="field">Id</p>
+                  </div>
+                  <div class="col-sm-9">
+                    <p class="text-muted mb-0">{{userdata.uid}}</p>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3 col-6">
+                    <p class="mb-0"id="field">Date Of Joining</p>
+                  </div>
+                  <div class="col-sm-9">
+                    <p class="text-muted mb-0">{{userdata.udoj}}</p>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3 col-6">
+                    <p class="mb-0"id="field">Date Of Birth</p>
+                  </div>
+                  <div class="col-sm-9">
+                    <p class="text-muted mb-0">{{userdata.udob}}</p>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <p class="mb-0"id="field">Mobile</p>
+                  </div>
+                  <div class="col-sm-9">
+                    <p class="text-muted mb-0">{{userdata.uphone}}</p>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <p class="mb-0"id="field">Salary</p>
+                  </div>
+                  <div class="col-sm-9">
+                    <p class="text-muted mb-0">₹ {{userdata.usalary}} P/M</p>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card mb-4 mb-md-0">
+                  <div class="card-body">
+                    <p class="mb-4"id="head"> Leave Status</p>
+                    <h3 style="font-size: 120%;color: rgb(0, 89, 255);">{{userdata.uleave}} / {{userdata.utleave}}</h3>
+                    <p class="mb-1" style="font-size: 110%;color: black;">Available Leave</p>
+                    <div class="progress rounded" style="height: 5px;">
+                      <div class="progress-bar" role="progressbar" style="background-color: rgb(136, 255, 0);"[style.width]="userdata.uleave/userdata.utleave *100+'%'" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+  
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </form>

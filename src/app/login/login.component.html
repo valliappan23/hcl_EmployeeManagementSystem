@@ -1,0 +1,21 @@
+<div class="background">
+<div class="login-box">
+    <h1>Login</h1>
+    <form #f="ngForm" method="post" id="f1"(submit)="doLogin(f)">
+        <div id="mes1">{{msg}}</div>
+        <!-- <div id="mes1">hi</div> -->
+        <div class="textbox">
+            <input type="text" placeholder="User Mail" name="umail" ngModel required #id1="ngModel">
+        </div>
+        <p class="alert alert-danger"*ngIf="id1.errors?.required && id1.touched">Please enter Your mail id</p>
+
+        <div class="textbox">
+            <input type="password" placeholder="Password" name="upass" ngModel required #pass1="ngModel">
+        </div>
+        <p class="alert alert-danger"*ngIf="pass1.errors?.required && pass1.touched">Please enter Your Password</p>
+
+        <button type="submit" value="submit" class="btn" [disabled]="f.invalid">Login</button>
+
+    </form>
+</div>
+</div>
