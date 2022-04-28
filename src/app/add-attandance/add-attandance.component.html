@@ -1,0 +1,61 @@
+<div class="background">
+
+<div class="testbox">
+  <h1>ADD ATTENDANCE</h1>
+
+  <form action="" #f="ngForm" (submit)="doAddInAttendance(f)">
+      <hr>
+      <div>
+          <div class="form-group">
+              <!-- <label for="FirstName">First Name</label> -->
+              <input type="text" class="form-control" id="firstName"placeholder="Enter first Name"required name="efirstname" ngModel #firstName="ngModel" pattern="^[A-Z]+[a-zA-Z]*$">
+          </div>
+          <small class="text-danger"*ngIf="firstName.errors?.required && firstName.touched">Please enter first name</small>
+          <small class="text-danger"*ngIf="firstName.errors?.pattern">Please enter valid first name</small>
+          <div class="form-group">
+            <!-- <label for="LastName">Last Name</label> -->
+            <input type="text" class="form-control" id="lastName"placeholder="Enter last Name"required name="elastname" ngModel #lastName="ngModel" pattern="^[A-Z]+[a-zA-Z]*$">
+        </div>
+        <small class="text-danger"*ngIf="lastName.errors?.required && lastName.touched">Please enter last name</small>
+        <small class="text-danger"*ngIf="lastName.errors?.pattern">Please enter valid last name</small>
+        <div class="form-group">
+            <!-- <label for="Id">Id</label> -->
+            <input type="text" class="form-control" id="id"placeholder="id"required name="eid" ngModel #id="ngModel" pattern="^([0-9]*)$">
+        </div>
+        <small class="text-danger"*ngIf="id.errors?.pattern">Please enter valid ID</small>
+        <small class="text-danger"*ngIf="id.errors?.required && id.touched">Please enter id</small>
+        <div class="form-group">
+            <!-- <label for="FirstName">Branch</label> -->
+            <input type="text" class="form-control" id="branch"placeholder="Enter branch"required name="ebranch" ngModel #branch="ngModel" pattern="^[A-Z]+[a-zA-Z]*$">
+        </div>
+        <small class="text-danger"*ngIf="branch.errors?.required && branch.touched">Please enter branch</small>
+        <div class="form-group">
+            <!-- <label for="Salary">Salary</label> -->
+            <input type="text" class="form-control" id="salary"placeholder="Enter salary"required name="esalary" ngModel #salary="ngModel"pattern="[1-9][0-9.]*[0-9]*">
+        </div>
+        <small class="text-danger"*ngIf="salary.errors?.required && salary.touched">Please enter salary</small>
+        <small class="text-danger"*ngIf="salary.errors?.pattern">Please enter valid Salary</small>
+        <div class="form-group">
+            <!-- <label for="Designation">Designation</label> -->
+            <input type="text" class="form-control" id="designation"placeholder="Enter designation"required name="edesignation" ngModel #designation="ngModel" pattern="^[A-Z]+[a-zA-Z]*$">
+        </div>
+        <small class="text-danger"*ngIf="designation.errors?.required && designation.touched">Please enter designation</small>
+        <small class="text-danger"*ngIf="designation.errors?.pattern">Please enter valid designation</small>
+        <div class="form-group">
+            <!-- <label for="Leave">Leave</label> -->
+            <input type="text" class="form-control" id="leave"placeholder="Enter present days"required name="eleave" ngModel #leave="ngModel" pattern="^([0-9]*)$" maxlength="2">
+        </div>
+        <small class="text-danger"*ngIf="leave.errors?.required && leave.touched">Please enter present days</small>
+        <small class="text-danger"*ngIf="leave.errors?.pattern">Please enter valid present fays</small>
+        <small class="text-danger"*ngIf="leave.errors?.maxlength">Please enter valid  number of days of holidays</small>
+
+        <div id="b1">
+            <input type="submit" class="btn btn-success" value="Done" [disabled]="f.invalid">
+        </div>
+
+          
+      </div>
+  </form>
+</div>
+
+</div>
