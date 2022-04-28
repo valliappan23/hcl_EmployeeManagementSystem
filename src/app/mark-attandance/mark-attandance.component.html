@@ -1,0 +1,58 @@
+<h2>Attandance</h2>
+
+
+<div class="button_container">
+
+    <button class="btn" id="btn2"><a href="\management">Management</a></button>&nbsp;
+    
+</div>
+
+
+<!-- search bar -->
+
+<div class="searchBox">
+
+    <input class="searchInput"type="text" name="" placeholder="Search" (keyup)="doSearch(search.value)" #search>
+    <button class="searchButton" href="#">
+        <i class="fa-solid fa-magnifying-glass">
+            
+        </i>
+    </button>
+</div>
+
+<!-- Table -->
+    
+<table class="container">
+    <thead>
+        <tr>
+            <th><h1>ID</h1></th>
+            <th><h1>Name</h1></th>
+            <!-- <th><h1>Last Name</h1></th> -->
+            <th><h1>Branch</h1></th>
+            <th><h1>Designation</h1></th>
+            <th><h1>Salary</h1></th>
+            <th><h1>Work Days</h1></th>
+            <th><h1>Operation</h1></th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of users">
+            <td>{{i.eid}} </td>
+            <td id="name">{{i.efirstname}} {{i.elastname}}</td>
+            <!-- <td>{{i.ulastname}}</td> -->
+            <td>{{i.ebranch}}</td>
+            <td>{{i.edesignation}}</td>
+            <td>{{i.esalary}}</td>
+            <td id="tp">{{i.eleave}}</td>
+            <td>
+                <button class="btn" (click)="addattendance(i.eleave,i.eid)"><i class="fa-solid fa-check text-success"></i></button>
+                <button class="btn"(click)="resetattendance(i.eleave,i.eid)"><i class="fa-solid fa-rotate text-primary"></i></button>
+            </td>
+            
+        </tr>
+    </tbody>
+</table>
+<p *ngIf="users.length==0" class="text-center text-danger" id="record">No Records Found</p>
+<br>

@@ -1,0 +1,208 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1.42em;
+  color:#A7A1AE;
+  background-color:#1F2739;
+}
+
+
+
+h2 {
+  padding-top: 10px;
+  font-size:2em; 
+  font-weight:bolder;
+  font-style: oblique;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  display: block;
+  padding-bottom: 0%;
+  color: darkgreen;
+  text-transform: uppercase;
+}
+
+
+.blue { color: #185875; }
+.yellow { color: #FFF842; }
+
+
+.container th h1 {
+	  font-weight: bold;
+	  font-size: 1em;
+  text-align: left;
+  color: black;
+}
+
+.container td {
+	  font-weight: normal;
+	  font-size: 1em;
+  -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+	   -moz-box-shadow: 0 2px 2px -2px #0E1119;
+	        box-shadow: 0 2px 2px -2px #0E1119;
+}
+#name{
+  white-space: nowrap;
+}
+
+.container {
+	  text-align: left;
+	  overflow: hidden;
+	  width: 100%;
+	  margin: 0 auto;
+  display: table;
+  padding: 0 0 8em 0;
+}
+
+.container td, .container th {
+	  padding-bottom: 10px;
+	  padding-top: 10px;
+  padding-left:10px;   
+}
+
+/* Background-color of the odd rows */
+.container tr:nth-child(odd) {
+	  background-color: whitesmoke;
+}
+
+/* Background-color of the even rows */
+.container tr:nth-child(even) {
+	  background-color: rgb(179, 171, 106);
+}
+
+.container th {
+	  background-color: goldenrod;
+}
+
+.container td:first-child { color: rgb(174, 0, 209); font-weight:bold; }
+
+.container tr:hover {
+   background-color: rgb(221, 161, 105);
+-webkit-box-shadow: 0 6px 6px -6px #0E1119;
+	   -moz-box-shadow: 0 6px 6px -6px #0E1119;
+	        box-shadow: 0 6px 6px -6px #0E1119;
+}
+
+.container td:hover {
+  background-color: #FFF842;
+  color: #403E10;
+  font-weight: bold;
+  
+  box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+  transform: translate3d(6px, -6px, 0);
+  
+  transition-delay: 0s;
+	  transition-duration: 0.4s;
+	  transition-property: all;
+  transition-timing-function: line;
+}
+
+
+
+
+
+/* search bar */
+.searchBox {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transform:  translate(-50%,50%,50%);
+    background: #2f3640;
+    height: 60px;
+    border-radius: 40px;
+    padding: 10px;
+    font-size: small;
+
+}
+
+.searchBox:hover > .searchInput {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.searchBox:hover > .searchButton {
+  background: white;
+  color : #2f3640;
+}
+
+.searchButton {
+    color: white;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.searchInput {
+    border:none;
+    background: none;
+    outline:none;
+    float:left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+
+}
+
+@media screen and (max-width: 620px) {
+.searchBox:hover > .searchInput {
+    width: 150px;
+    padding: 0 6px;
+}
+}
+a{
+  text-decoration: none;
+}
+#record{
+  font-size: larger;
+}
+
+
+
+
+/* button */
+
+.button_container{
+    padding-left: 100px;
+    padding-bottom: 20px;
+    
+  }
+  
+  #btn,#btn1,#btn2{
+    border: 1px solid goldenrod;
+    height: 60px;
+    width:200px;
+    text-transform: uppercase;
+    font-family: monospace;
+    cursor: pointer;
+    margin: 10px;
+    margin-top: 0px;
+    transition: cubic-bezier(0.86, 0, 0.07, 1);
+    position: relative;
+    overflow: hidden;
+    background-color: #0E1119;
+    color:white
+  
+  }
+  
+  #btn:hover,#btn1:hover,#btn2:hover{
+    color: black;
+    background-color: goldenrod;
+  }
+  a{
+    color: white;
+  }
+  a:hover{
+    color:black;
+  }
