@@ -10,7 +10,7 @@ import { AddUsersService } from '../add-users.service';
 export class DashboardComponent implements OnInit {
 
   userdata:{_id:number,ubranch:string,udesignation:string,udob:string,udoj:string,ufirstname:string,uid:string,
-    ulastname:string,uleave:number,umail:string,upass:string,uphone:string,usalary:string,utleave:number};
+    ulastname:string,uleave:number,umail:string,upass:string,uphone:string,usalary:string,utleave:number}; 
 
   constructor(public activeRoute:ActivatedRoute,public userSer:AddUsersService) { }
 
@@ -21,11 +21,16 @@ export class DashboardComponent implements OnInit {
         this.userSer.getSingleUsersData(param.USERID).subscribe((data:any[])=>{
           console.log(data);
           this.userdata=data[0];
+         
         },(error:any)=>{
           console.log(error);
         })
       }
     })
+  }
+  addattendance(ID:string){
+    console.log(ID);
+    
   }
   
 
