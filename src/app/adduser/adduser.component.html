@@ -35,7 +35,7 @@
                         <input type="text" class="form-control" id="firstName" placeholder="Enter first name" ngModel required name="ufirstname" #firstname1="ngModel">
                     </div>
                     <!-- {{firstname1.errors | json}} -->
-                    <p class="alert alert-danger"*ngIf="firstname1.errors?.required && firstname1.touched">Please enter first name</p>
+                    <small class="alert alert-danger"*ngIf="firstname1.errors?.required && firstname1.touched">Please enter first name</small>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
@@ -72,7 +72,7 @@
                         <label for="branch">Branch</label>
                         <input type="text" class="form-control" id="branch" placeholder="Branch Name" ngModel required name="ubranch" #branch1="ngModel">
                     </div>
-                    <p class="alert alert-danger"*ngIf="branch1.errors?.required && branch1.touched">Please enter branch</p>
+                    <span class="alert alert-danger"*ngIf="branch1.errors?.required && branch1.touched">Please enter branch</span>
                 </div>
 
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
