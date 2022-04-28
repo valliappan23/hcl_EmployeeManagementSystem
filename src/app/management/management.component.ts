@@ -11,9 +11,11 @@ export class ManagementComponent implements OnInit {
   users: any[]=[];
 
   constructor(public userSer:AddUsersService) { }
-
+  
   ngOnInit(): void {
-    this.userSer.getAllUsers().subscribe((data:any[])=>{
+    let c=localStorage.getItem("loggeduserDesignation");
+    console.log("local "+c);
+    this.userSer.getAllUsers(c).subscribe((data:any[])=>{
       console.log(data);
       this.users=data;
     },(error:any)=>{
@@ -42,5 +44,6 @@ export class ManagementComponent implements OnInit {
       console.log(error)
     })
   }
+  
 
 }
