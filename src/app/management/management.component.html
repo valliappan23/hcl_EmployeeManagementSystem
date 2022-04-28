@@ -9,8 +9,15 @@
 
 <div class="button_container">
     
-    <a  routerLink="/add"><button class="btn" id="btn"><span>Add Employee</span></button></a>
-  </div>
+    <a  routerLink="/add"><button class="btn" id="btn"><span>Add Employee</span></button></a>&nbsp;
+
+    <a  routerLink="/addAttendance"><button class="btn" id="btn1" *ngIf="!!userSer.isMng()"><span>Add Attandance</span></button></a>&nbsp;
+
+    <a  routerLink="/ManageAttendance"><button class="btn" id="btn2"*ngIf="!!userSer.isMng()"><span>Manage Attandance</span></button></a>&nbsp;
+    
+</div>
+
+
   
   
 
