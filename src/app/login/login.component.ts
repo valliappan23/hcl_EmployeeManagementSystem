@@ -31,6 +31,9 @@ export class LoginComponent implements OnInit {
         localStorage.setItem("loggeduserDesignation",data[0].udesignation);
         let b=localStorage.getItem("loggeduserDesignation");
         console.log(b);
+        localStorage.setItem("loggeduser MAIN ID",data[0].uid);
+        let c=localStorage.getItem("loggeduser MAIN ID");
+        console.log(c);
         this.myRouter.navigateByUrl(`/dashboard/${a}`);
       }
     },(error: any)=>{
