@@ -23,3 +23,22 @@
     font-size: x-large;
     color: red;
 }
+li{
+    list-style: none;
+}
+#b1{
+    color: red;
+}
+.menu{
+    cursor:text;
+    color:black;
+    position:relative;
+    z-index: 1;
+    padding-top: 7px;
+}
+.btn{
+    border:1px solid black;
+    position:static;
+    margin-bottom: 20px;
+    
+}
